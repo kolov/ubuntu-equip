@@ -35,4 +35,7 @@ sudo mv maven /opt/
 rm -f $FILENAME
 rm -f equip_maven3.sh
 
+#Create link on the PATH
+sudo ln -s /opt/maven/bin/mvn /usr/local/bin/mvn
+
 echo "Installed in /opt/maven"

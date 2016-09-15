@@ -16,8 +16,14 @@ fi
 VERSION="ideaIC-2016.2.4.tar.gz"
 LINK="https://download.jetbrains.com/idea/$VERSION"
 
-wget --no-check-certificate --timestamping "$LINK"
-mv $VERSION idea.tar.gz
+if [ -f "$VERSION" ]; then
+	echo "Idea already downloaded, skipping!"
+else
+    wget --no-check-certificate --timestamping "$LINK"
+fi
+
+
+mv "$VERSION" idea.tar.gz
 tar -xvf idea.tar.gz
 
 # Will copy to /opt

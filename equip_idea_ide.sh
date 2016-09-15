@@ -22,8 +22,10 @@ else
     wget --no-check-certificate --timestamping "$LINK"
 fi
 
+echo About to run:
+echo mv $VERSION idea.tar.gz
 
-mv "$VERSION" idea.tar.gz
+mv $VERSION idea.tar.gz
 tar -xvf idea.tar.gz
 
 # Will copy to /opt
